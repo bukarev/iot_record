@@ -1,0 +1,2 @@
+export SPARK_HOME=/usr/hdp/current/spark2-client
+/usr/hdp/current/spark2-client/bin/spark-submit --master yarn --executor-memory 2G --num-executors 1 --class azureSensortag --jars /usr/hdp/2.6.5.0-292/spark2/jars/spark-sql-kafka-0-10_2.11-2.3.0.2.6.5.0-292.jar,/usr/hdp/2.6.5.0-292/spark2/jars/kafka-clients-1.0.0.2.6.5.0-292.jar,/usr/hdp/2.6.5.0-292/spark2/jars/lift-json_2.11-3.3.0-RC1.jar /home/rbukarev/iot/stream1/target/scala-2.11/consume-iot-azure-by-spark_2.11-0.0.1.jar "xxxx1.com.au:6667,xxxx2.com.au:6667,xxxx3.com.au:6667" "sensortag_raw" "$Default" latest 3 2000 L
